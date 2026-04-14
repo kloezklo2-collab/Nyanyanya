@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            width: 100vw;
+            height: 100vh;
+            background-color: white;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body onclick="reproducir()">
+
+    <script>
+        let yaSonó = false;
+        const audio = new Audio('floppa explota.mp3');
+
+        function reproducir() {
+            if (!yaSonó) {
+                audio.play();
+                yaSonó = true; // Bloquea futuros sonidos
+                document.body.style.cursor = "default"; // Cambia el cursor para indicar que ya no es clickeable
+            }
+        }
+    </script>
+
+</body>
+</html>
+
